@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>Blog</title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #above::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.4;
+            z-index: -2;
+            background: url("/office-g8e642fb21_1920.jpg") no-repeat center center/cover;
+
+        }
+
+        #above {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        #navigation:before {
+            background-color: black;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        #logo1 {
+            width: 5rem;
+            height: 5rem;
+            margin: 0.5rem;
+
+        }
+
+        #navigation {
+            position: relative;
+            font-size: 1.5rem;
+            color: white;
+            display: flex;
+            list-style: none;
+        }
+
+        #navbar {
+            position: relative;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .bar {
+            margin: 1.5rem;
+            border-radius: 1rem;
+            padding: 0.5rem;
+           
+        }
+        .items{
+            text-decoration: none;
+            color: white;
+
+
+        }
+
+        .bar:hover {
+            background-color: orange;
+        }
+
+        .opt {
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+            border: 2px solid black;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+        }
+
+        #sign {
+            margin: 1.5rem;
+            padding: 0.5rem;
+            font-size: 1.3rem;
+            text-decoration: none;
+            color: white;
+            border: none;
+            background-color: green;
+            border-radius: 1.2rem;
+            text-align: right;
+            float: right;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .btn {
+
+            text-decoration: none;
+            border-radius: 1rem;
+            border: none;
+            color: white;
+            padding: 1rem;
+            margin: 1rem;
+            font-size: 1rem;
+            background-color: brown;
+        }
+
+        .btn:hover {
+            color: black;
+            background-color: greenyellow;
+        }
+
+        #sign:hover {
+            background-color: red;
+        }
+
+        #mid {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            margin-top: 4rem;
+            font-family: 'Bree Serif', serif;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        #mid p {
+            font-size: 1.5rem;
+        }
+
+        .h-primary {
+            font-size: 3.5rem;
+        }
+
+        .h-secondary {
+            font-size: 2.4rem;
+        }
+
+        .center {
+            text-align: center;
+
+        }
+
+        .content {
+            font-size: 1.1rem;
+        }
+        #blog{
+            margin: auto;
+            margin-top: 2rem;
+            padding:1.5rem;
+            border:2px solid white;
+            display: block;
+        }
+
+        #start {
+            display: flex;
+            margin-top: 2rem;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            background-color: cyan;
+            text-align: center;
+            border-radius: 1.5rem;
+            margin: 1rem;
+            box-shadow:5px 5px black;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .logos {
+            display: block;
+            margin: auto;
+            margin-top: 0.4rem;
+            border-radius: 1rem;
+            width: 20rem;
+            height: 15rem;
+        }
+
+        #more::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            opacity: 0.5;
+            z-index: -1;
+            background: url("/domain-g6b0461eb2_1920.jpg")no-repeat center center/cover;
+
+        }
+
+        #more {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            margin-top: 1rem;
+            position: relative;
+            font-family: 'Bree Serif', serif;
+        }
+
+        #starting {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        #search {
+            border: 2px solid;
+            border-radius: 1.2rem;
+            width: 85%;
+            height: 100%;
+            margin: 1rem;
+            padding: 1rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .home {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 1rem;
+
+
+        }
+
+        .sec {
+            width: 15rem;
+            height: 15rem;
+            border: 2px solid black;
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            justify-content: space-evenly;
+        }
+
+        .last {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            margin: 1rem;
+            font-size: 1rem;
+        }
+
+        .last img {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            font-size: 1.5rem;
+            font-family: 'Bree Serif', serif;
+        }
+
+        @media screen and (max-width:1200px) {
+            #start {
+                flex-direction: column;
+            }
+
+            .bar {
+                margin: 0.2rem;
+                padding: 0.4rem;
+            }
+
+            #navigation {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width:522px) {
+
+            .bar {
+                
+                margin: 0.4rem;
+                border-radius: 0.8rem;
+                padding: 0.3rem;
+            }
+        }
+
+        @media screen and (max-width:438px) {
+
+            .bar {
+                margin: 0.2rem;
+                border-radius: 0.4rem;
+                padding: 0.1rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media screen and (max-width:358px) {
+
+            .bar {
+
+                font-size: 1rem;
+            }
+
+            .logos {
+                width: 15rem;
+            }
+
+            .h-primary {
+                font-size: 3rem;
+            }
+
+            .h-secondary {
+                font-size: 2.1rem;
+            }
+        }
+
+        @media screen and (max-width:286px) {
+
+            #navbar {
+
+                flex-direction: column;
+            }
+
+            .logos {
+                width: 10rem;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <section id="above">
+        <section>
+            <nav id="navigation">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Blogger_icon_2017.svg" id="logo1"
+                    alt="Blogger">
+                <ul id=navbar>
+                    <li class="bar"><a href="#" class="items">Home</a></li>
+                    <li class="bar"><a href="/css10.html" target="_blank" class="items">About us</a></li>
+                    <li class="bar"><a href="https://www.instagram.com/divyanshurana_312/" target="_blank" class="items">Contact us</a></li>
+                    <li class="bar"><a href="https://divyansh453.github.io/partyplanner5/" target="_blank" class="items">Find new</a> </li>
+
+                </ul>
+                <a href="#" class="btn" id="sign">Sign in</a>
+            </nav>
+        </section>
+        <section id="mid">
+            <div>
+                <h1 class="h-primary center">Write your blog here</h1>
+            </div>
+            <div>
+                <p class="center content">We Will increase your reach and help you to share your experiences here.This
+                    website & our company is available for you.</p>
+            </div>
+            <h1 class="h-secondary center" id="blog">Trending Blogs</h1>
+            <section id="start">
+
+                <div class="item">
+                    <img src="/keyboard-ge908bd386_1920.jpg" alt="" class="logos">
+                    <h2 class="h-secondary center">What to do before publishing</h2>
+                    <p class="content">
+                        So you have created a blog post. It's well-written,makes use of our expert blogging tips and
+                        will provide plenty of value to you content.
+                    </p>
+                    <a href="#" class="btn">WORDPRESS</a>
+                </div>
+                <div class="item">
+                    <img src="/wordpress-g8b9cf4454_1920.jpg" alt="" class="logos">
+                    <h2 class="h-secondary center">How to Start a Blog:<br>A Comprehensive guide</h2>
+                    <p class="content">
+                        Blogs have become a ubiquitous part of the online landscape.Most internet users and companies have one,and that's no coincidence..
+                    </p>
+                    <a href="#" class="btn">CUSTOMER STORIES</a>
+                </div>
+                <div class="item">
+                    <img src="/website-g584b07787_1920.jpg" alt="" class="logos">
+                    <h2 class="h-secondary center">Host Your website</h2>
+                    <p class="content">
+                        Nowdays everything is online and the world is a digitaly connected.The demand of web developers is increasing day by day and India is no.1 in it..
+                    </p>
+                    <a href="#" class="btn">WEB HOSTING</a>
+                </div>
+            </section>
+        </section>
+    </section>
+    <section id="more">
+        <div id="starting">
+            <input type="search" name="dr" id="search" placeholder="Search the blog">
+            <a href="#" class="btn">Sign up</a>
+        </div>
+        <div class="home">
+            <h1 class="h-primary center">Get Started With</h1>
+            <div class="images">
+                <div class="boxes">
+
+
+                    <a href="#" class="last">
+                        <img src="/photo_2022-09-11_19-22-18.jpg" alt="" class="sec">
+                        Installing a Plugin</a>
+                </div>
+                <div class="boxes">
+                    <a href="#" class="last">
+                        <img src="/photo_2022-09-11_19-22-29.jpg" alt="" class="sec">Migrating an Existing Website</a>
+                </div>
+                <div class="boxes">
+
+
+                    <a href="#" class="last">
+                        <img src="/photo_2022-09-11_19-22-33.jpg" alt="" class="sec">
+                        Installing a theme</a>
+                </div>
+                <div class="boxes">
+
+                    <a href="#" class="last">
+                        <img src="/photo_2022-09-11_19-22-36.jpg" alt="" class="sec">
+                        Logging Into Wordpress?</a>
+
+                </div>
+                <div class="boxes">
+                    <a href="#" class="last">
+                        <img src="/photo_2022-09-11_19-23-48.jpg" alt="" class="sec">
+                        Installing a WordPress</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="center">Copyright&copy; wwww.drblogs.com</footer>
+</body>
+
+</html>
