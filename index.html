@@ -452,8 +452,10 @@
     <footer class="center">Copyright&copy; wwww.drblogs.com</footer>
     <script>
         let name=prompt("What is your name?","Guest");
-        if(name==null)or(name=="")
+        if(name==null)
         { name="Guest";}
+        if(name=='')
+        {name="Guest";}
         document.getElementById('mainhead').innerHTML='<h3>Hi '+name+', </h3>'
     </script>
 </body>
