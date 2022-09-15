@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register yourself</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            font-size: 3.8rem;
+            font-family: 'Baloo Bhai 2', cursive;
+            display: block;
+            margin: auto;
+        }
+        .container::before{
+            content: "";
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            height:100vh;
+            background: url("/laptop-g00cb71923_1920.jpg") no-repeat center center/cover;
+            z-index: -1;
+            opacity: 1;
+
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+        #register{
+            display: flex;
+            flex-direction: column;
+        
+            margin-top:2rem;
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+        .items{
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 15px;
+            width: 100%;
+            font-family: 'Bree Serif', serif;
+        }
+        #btn{
+            margin-top: 1rem;
+            padding: 0.5rem;
+            width: 100%;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register Yourself</h1>
+        <form action="no.php" id="register">
+            <input type="text" class="items" placeholder="Enter your name">
+            <input type="email" class="items" placeholder="Enter your email">
+            <input type="phone" class="items" placeholder="Enter your phone no.">
+            <input type="date" class="items"  placeholder="Date of Birth">
+            <textarea name="text" class="items" cols="30" rows="10" placeholder="About yourself"></textarea>
+            <input type="button" class="item" id="btn" value="Submit" onclick="message()">
+        </form>
+    </div>
+    <script>
+        function message() {
+            alert("Form is Submitted");
+        }
+    </script>
+</body>
+</html>
