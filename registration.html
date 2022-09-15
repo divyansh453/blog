@@ -14,8 +14,8 @@
         h1{
             font-size: 3.8rem;
             font-family: 'Baloo Bhai 2', cursive;
-            display: block;
-            margin: auto;
+            text-align:"center";
+           
         }
         .container::before{
             content: "";
@@ -58,6 +58,20 @@
             padding: 0.5rem;
             width: 100%;
             border-radius: 15px;
+            background-color:red;
+            color:white;
+        }
+        
+        @media screen and (max-width:286px) {
+
+            #navbar {
+
+                flex-direction: column;
+            }
+
+            .logos {
+                width: 10rem;
+            }
         }
     </style>
 </head>
