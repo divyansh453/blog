@@ -18,16 +18,19 @@
             text-align: center;
            
         }
+        #logo1{
+            width:8rem;
+        }
         .container::before{
             content: "";
             left: 0;
             top: 0;
             position: absolute;
             width: 100%;
-            height:100vh;
+            height:105%;
             background: url("laptop-g00cb71923_1920.jpg") no-repeat center center/cover;
             z-index: -1;
-            opacity: 1;
+            opacity: 0.5;
 
         }
         .container{
@@ -42,8 +45,8 @@
             display: flex;
             flex-direction: column;
         
-            margin-top:2rem;
-            padding: 2rem;
+            margin-top:1rem;
+            padding: 1rem;
             align-items: center;
             justify-content: center;
         }
@@ -64,6 +67,10 @@
             color: white;
             font-size: 1.2rem;
         }
+        #dob{
+            font-family: 'Bree Serif', serif;
+            
+        }
         @media screen and (max-width:514px) {
             h1{
                 font-size: 2.8rem;
@@ -77,13 +84,18 @@
 </head>
 <body>
     <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Blogger_icon_2017.svg" id="logo1"
+                    alt="Blogger">
         <h1>Register Yourself</h1>
         <form action="no.php" id="register">
-            <input type="text" class="items" placeholder="Enter your name">
-            <input type="email" class="items" placeholder="Enter your email">
-            <input type="phone" class="items" placeholder="Enter your phone no.">
-            <input type="date" class="items"  >
-            <textarea name="text" class="items" cols="30" rows="10" placeholder="About yourself"></textarea>
+            <label for="name"></label>
+            <input type="text" id="name" class="items" placeholder="Enter your name">
+            <input type="email" id="email" class="items" placeholder="Enter your email">
+            <input type="phone" id="phone" class="items" placeholder="Enter your phone no.">
+            <label for="dob" class="items" id="dob">Date of Birth:</label>
+            <input type="date" name="dob" class="items">
+            <label for="about"></label>
+            <textarea name="text" id="about" class="items" cols="30" rows="10" placeholder="About yourself"></textarea>
             <input type="button" class="item" id="btn" value="Submit" onclick="message()">
         </form>
     </div>
