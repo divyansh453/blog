@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation</title>
     <style>
+       
         .navbar{
             background-color: red;
             border-radius:15px;
@@ -31,6 +32,16 @@
         a:hover{
             background-color: orange;
         }
+        #main{
+            display: flex;
+            flex-direction: column;
+        }
+        #main img{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
         #search{
              /* background-color:red;  */
              border:none; 
@@ -46,6 +57,8 @@
         }
         h1{
             color:brown;
+            display: flex;
+            justify-content: center;
             text-align: center;
             border:none;
             margin:auto 40%; 
@@ -66,9 +79,8 @@
             margin:auto 55%;
         }
         #dusri{
-            float:right;
-            height:15%;
-            width:10%;
+            height:15rem;
+            width:12rem;
         }
         a{
             text-decoration: none;
@@ -82,21 +94,20 @@
 <body>
     <header>
         <span class="try">
-        <img src="/photo_2022-08-24_13-18-21.jpg" alt="DR" id="phli"><h1>
+        <h1>
         Divyanshu & Company</h1>
         <p id="new">(SINCE 2022)</p></span>
         <nav class="navbar">
             <ul>
                 <li><a href="https://www.google.com" target="_blank">Home</a> </li>
-                <li><a href="https://en.wikipedia.org/wiki/Akshay_Kumar" target="_blank">About</a></li>
                 <li><a href="https://aws.amazon.com/" target="_blank">Services</a></li>
                 <li><a href="https://www.instagram.com/divyanshurana_312/" target="_blank">Contact us</a></li>
-                <div class="search"><input type="search" name="search" id="search" placeholder="Search"></div>
             </ul>
         </nav>
     </header>
     <tbody >
-        <img src="/photo_2022-08-24_13-33-10.jpg" alt="DR" id="dusri">
+        <section id="main">
+        <img src="photo_2022-08-24_13-33-10.jpg" alt="DR" id="dusri">
         <h3>About our Founder:</h3>
         <p class="apna">
             Divyanshu Rana completed his school education from <a href="https://en.wikipedia.org/wiki/Jawahar_Navodaya_Vidyalaya" target="_blank">Jawahar Navodaya Vidyalaya Ghaziabad</a>.He was a talented student from his childhood.
@@ -116,6 +127,7 @@
             <summary>career</summary>
             (2022 to 2025):
         </details>
+        </section>
     </tbody>
 </body>
 </html>
